@@ -3,7 +3,7 @@
 ## Inventory App
 
 ### 1. Trello Board
-[Trello Board link](https://www.google.com "Trello Board Project 2")
+[Trello Board link](https://trello.com/b/G2RHDvIP "Trello Board Project 2")
 
 ### 2. ERD
 ![ERD](images/ERD.png "ERD")
