@@ -1,23 +1,17 @@
 {
   "name": "wdi-project2-inventoryapp",
-  "version": "1.0.0",
-  "description": "## Inventory App",
-  "main": "server.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AndreykaVSR/GA-WDI-Project2.git"
-  },
-  "author": "AndreykaVSR",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AndreykaVSR/GA-WDI-Project2/issues"
-  },
-  "homepage": "https://github.com/AndreykaVSR/GA-WDI-Project2#readme",
   "dependencies": {
-    "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "mongoose": "^5.4.15",
+    "morgan": "~1.9.0"
   }
 }
