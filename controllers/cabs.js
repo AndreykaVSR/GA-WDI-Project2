@@ -2,22 +2,23 @@ var Cab = require('../models/cab');
 
 module.exports = {
     new: newCab,
-    create,
+    create: createCab,
     index,
     show
 };
 
 function show(req, res) {
-    // console.log('I see you');
+    console.log('I see you');
       Cab.findById(req.params.id, function(err, cab) {
       // console.log(cabs);
-      res.render('./cabs/show', { title: 'Cabs',  cab})
+      res.render('./cabs/show', { title: 'Cabs',  cab })
     });
   }
 
 function index(req, res) {
     Cab.find({}).exec(function(err, cabs) {
-      res.render('cabs/index', { cabs });
+        console.log(cabs);
+      res.render('cabs/index', { title: 'Cabs', cabs });
     });
   };
 
@@ -34,17 +35,18 @@ function index(req, res) {
 
 // res.redirect(`/cabs/${cab._id}`);
 
-function create(req, res) {
+function createCab(req, res) {
     for (let key in req.body){
         if (req.body[key] === '') delete req.body[key];
     }
     var cab = new Cab(req.body);
     console.log(cab);
+    console.log(req.body);
     cab.save(function(err) {
       // one way to handle errors
       if (err) return res.render('cabs/new');
       console.log(cab + 'cab');
-      res.redirect('/cabs/');
+      res.redirect('/cabs');
     });
 };
 

@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
  var cabSchema = new Schema({
     make: {
         type: String,
-        enum: ['Main Street', 'Cycles Maximus', 'Precision', 'Coaster', 'Pedalac', 'Some China Cab']
+        enum: ['Main Street', 'Cycles Maximus', 'Precision', 'Coaster', 'Pedelec', 'Some China Cab']
     },
     model: {
         type: String,
@@ -14,16 +14,13 @@ var mongoose = require('mongoose');
     year: Number,
     frameType: String,
     capacity: Number,
-    serialNum: Number,
+    serialNum: String,
     eAssist: Boolean,
     canopy: Boolean,
     rented: Boolean,
-    driver: {
-        name: String,
-        first: String,
-        last: String,
-        nickname: String
-    },
+    driverFirst: String,
+    driverLast: String,
+    driverNickname: String,
     comments: [{ 
         body: String, 
         date: Date 

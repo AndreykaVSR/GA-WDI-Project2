@@ -6,14 +6,19 @@ var cabsCtrl = require('../controllers/cabs');
 router.get('/', cabsCtrl.index);
 router.get('/new', cabsCtrl.new);
 router.get('/:id', cabsCtrl.show);
-// router.post('/', cabsCtrl.create);
-// router.post('/:id', cabsCtrl.delete);
-// router.post('/:id', cabsCtrl.update);
+router.post('/', cabsCtrl.create);
+// router.delete('/:id/delete', cabsCtrl.delete);
+// router.post('/:id/', cabsCtrl.update);
 
 
-
-// router.get('cabs/index', function(req, res, next) {
-//   res.send('index', { title: 'All Cabs' });
-// });
 
 module.exports = router;
+
+// router.get('/', dishesCtrl.index);
+// router.get('/new', dishesCtrl.new);
+// router.get('/:id', dishesCtrl.show);
+// router.post('/', dishesCtrl.create);
+// router.get('/:id/edit', dishesCtrl.edit);
+// router.get('/:id/delete', dishesCtrl.delete);
+// // router.post('/:id', dishesCtrl.update);
+// router.delete('/:id', dishesCtrl.removeDish);

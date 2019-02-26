@@ -1,11 +1,45 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include('../partials/template') %>
+  <h1>Total Cab List</h1>
+    <table id = "tblCabsList">
+      <thead>
+        <tr>
+          <th style = "color: rgb(80, 79, 79);" >Make</th>
+          <th style = "color: rgb(80, 79, 79);" >Model</th>
+          <th style = "color: rgb(80, 79, 79);" >Year</th>
+          <th style = "color: rgb(80, 79, 79);" >Frame Type</th>
+          <th style = "color: rgb(80, 79, 79);" >Serial Number</th>
+          <th style = "color: rgb(80, 79, 79);" >Capacity</th>
+          <th style = "color: rgb(80, 79, 79);" >E-Assist</th>
+          <th style = "color: rgb(80, 79, 79);" >Canopy</th>
+          <th style = "color: rgb(80, 79, 79);" >Rented</th>
+          <th style = "color: rgb(80, 79, 79);" >Drivers First Name</th>
+          <th style = "color: rgb(80, 79, 79);" >Drivers Last Name</th>
+          <th style = "color: rgb(80, 79, 79);" >Details</th>
+        </tr>
+      </thead>
+        <tbody id = "tblBodyCabs">
+          <% cabs.forEach(function(c) { %>
+          <tr>
+            <td><%= c.make %></td>
+            <td><%= c.model %></td>
+            <td><%= c.year %></td>
+            <td><%= c.frameType %></td>
+            <td><%= c.serialNum %></td>
+            <td><%= c.capacity %></td>
+            <td><%= c.eAssist %></td>
+            <td><%= c.canopy %></td>
+              <% if (c.rented ) { %>
+            <td style = "color: rgb(55, 102, 63)"> <%= c.rented %> </td>
+              <% } else { %>
+            <td> <%= c.rented %> </td>
+              <% } %>
+            <td><%= c.driverFirst %></td>
+            <td><%= c.driverLast %></td>
+            <td>
+              <a href="/cabs/<%= c._id %>"> View </a> 
+            </td>
+          </tr>
+            <% }); %>
+        </tbody>
+    </table>
+<%- include('../partials/footer') %>
