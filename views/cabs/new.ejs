@@ -1,0 +1,79 @@
+<%- include('../partials/template') %>
+    <h1>Enter a New Cab</h1>
+    <form id = "cabNew" action="/cabs" method="POST">
+        <label>Make</label>
+            <div>
+            <select name = "make">
+                <option value = "mainStreet">Main Street</option>
+                <option value = "cyclesMaximus">Cycles Maximus</option>
+                <option value = "precision">Precision</option>
+                <option value = "coaster">Coaster</option>
+                <option value = "pedalac">Pedalac</option>
+                <option value = "china">China</option>
+                </select>
+            </div>
+        <label>Model</label>
+            <div>
+            <select name = "model">
+                <option value = "mainStreet">Classic</option>
+                <option value = "cyclesMaximus">Broadway</option>
+                <option value = "precision">Boardwalk</option>
+                <option value = "coaster">Cargo</option>
+                <option value = "pedalac">Custom</option>
+                </select>
+            </div>
+        <label>Year</label>
+            <div> 
+                <input type = "number" name = "year">
+            </div>
+        <label>Frame Type</label>
+            <div> 
+                <input type = "text" name = "frameType">
+            </div>
+        <label>Capacity</label>
+            <div> 
+                <input type = "number" name = "capacity">
+            </div>
+        <label>Serial Number</label>
+            <div> 
+                <input type = "text" name = "serialNum">
+            </div>
+        <label>E-Assist</label>
+            <div>
+            <select name = "eAssist">
+                <option value = "YES">YES</option>
+                <option value = "NO">NO</option>
+            </select>
+            </div>
+        <label>Canopy</label>
+            <div>
+            <select name = "canopy">
+                <option value = "YES">YES</option>
+                <option value = "NO">NO</option>
+            </select>
+            </div>
+        <label>Rented</label>
+            <div>
+            <select name = "rented">
+                <option value = "YES">YES</option>
+                <option value = "NO">NO</option>
+            </select>
+            </div>
+        <label>Drivers First Name</label>
+            <div> 
+                <input type = "text" name = "firstName">
+            </div>
+        <label>Drivers Last Name</label>
+            <div> 
+                <input type = "text" name = "lastName">
+            </div>
+            <br>
+            <div>
+                <input id = "btnCabAdd" type = "submit" value = "Add Cab">
+            </div>
+    </form> 
+    <%- include('../partials/footer') %>
+
+
+    
+    

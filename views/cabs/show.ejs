@@ -1,0 +1,71 @@
+<%- include('../partials/template') %>
+    <h1>Your Selected Cabs Details</h1>
+    <table id = "tblSelectCab">
+        <thead>
+            <tr>
+                <th style = "color: rgb(80, 79, 79);" >Make</th>
+                <th style = "color: rgb(80, 79, 79);" >Model</th>
+                <th style = "color: rgb(80, 79, 79);" >year</th>
+                <th style = "color: rgb(80, 79, 79);" >Frame Type</th>
+                <th style = "color: rgb(80, 79, 79);" >Serial #</th>
+                <th style = "color: rgb(80, 79, 79);" >e-Assist</th>
+                <th style = "color: rgb(80, 79, 79);" >Canopy</th>
+                <th style = "color: rgb(80, 79, 79);" >Rented</th>
+                <th style = "color: rgb(80, 79, 79);" >Driver</th>
+            </tr>
+        </thead>
+        <tbody id = "tblBodyCab">
+            <% for (i = 0; i < cab.length; i++) { %>
+            <tr>
+                <td><%= cab[i].make %> </td>
+                <td><%= cab[i].model %> </td>
+                <td><%= cab[i].year %> </td>
+                <td><%= cab[i].frameType %> </td>
+                <td><%= cab[i].serialNum %> </td>
+                <td><%= cab[i].eAssist %> </td>
+                <td><%= cab[i].canopy %> </td>
+                    <% if (cab[i].rented < false) { %>
+                <td style = "color: rgb(143, 2, 2)"> <%= cab[i].rented %> </td>
+                    <% } else { %>
+                <td><%= cab[i].rented %> </td>
+                    <% } %>
+                <td><%= cab[i].driver %> </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- ========== -->
+    <!-- <div>
+        <br>
+        <h1>Add Cab</h1>
+        <form id = "addCab" action="/cabs/<%= cab._id %>/cabs" method="POST">
+        <label>Destination Airport:</label>
+            <div>
+                <select name = "airport">
+                    <option value = "AUS">AUS</option>
+                    <option value = "DAL">DAL</option>
+                    <option value = "LAX">LAX</option>
+                    <option value = "SEA">SEA</option>
+                </select>
+            </div>
+        <label>Arrival Time:</label>
+            <div>
+                <input class = "timeDestination" type = "datetime-local" name = "arrival">
+            </div>
+            <div>
+                <input id = "btnFlightAdd" type = "submit" value = "Add Destination">
+            </div>
+        </form> 
+        <br>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+<%- include('../partials/footer') %>
