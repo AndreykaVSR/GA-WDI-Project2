@@ -11,65 +11,16 @@ body {
   color: rgb(80, 80, 80);
 }
 
-img {
-  border: solid 7px rgba(80, 80, 80, .7);;
-  /* border-color: red; */
-  border-radius: 7px;
-  width: 525px;
-  /* height: 250px; */
-}
-
-/* div #indexImgs {
-  display: inline-block;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-} */
-
-/* div #abtBecome {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-} */
-
-#about {
-  flex-direction: row;
-  align-content: left;
-  display: inline-table;
-  /* float: left; */
-  margin: 0px 0px 0px 0px; 
-  padding: 25px 0px 25px 0px; 
-  width: 500px;
-}
-
-#become {
-  flex-direction: row;
-  align-content: right;
-  display: inline-table;
-  /* float: right; */
-  margin: 0px 0px 0px 50px; 
-  padding: 25px 0px 25px 0px; 
-  width: 500px;
-}
-
-/* #pedicabImg2 {
-  display: flex;
-  float: right;
-  flex-direction: row;
-} */
-
 nav {
-  margin: 0px 7px;
+  margin: 0px 0px;
   padding: 5px 0px;
   color: rgb(80, 80, 80);
 }
 
 .logInLnk {
-  /* display: inline-block; */
-  margin: 10px 0px 10px 10px;
-  /* padding: 10px 0px 10px 10px; */
+  display: inline-block;
   /* position: absolute; */
-  /* text-align: left; */
+  text-align: left;
   float: right;
 }
 
@@ -148,7 +99,7 @@ a {
   display: inline-block;
   align-content: center;
   padding: 5px;
-  margin: 10px 10px 10px 0px; 
+  margin: 10px 0px; 
 }
 
 a:hover {
