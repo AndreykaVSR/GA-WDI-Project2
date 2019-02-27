@@ -1,8 +1,8 @@
 <%- include('../partials/template') %>
     <h1>Enter a New Cab</h1>
     <form id = "cabNew" action="/cabs" method="POST">
+        <div>
         <label>Make</label>
-            <div>
             <select name = "make">
                 <option value = "Main Street">Main Street</option>
                 <option value = "Cycles Maximus">Cycles Maximus</option>
@@ -12,8 +12,8 @@
                 <option value = "Some China Cab">Some China Cab</option>
                 </select>
             </div>
-        <label>Model</label>
             <div>
+        <label>Model</label>
             <select name = "model">
                 <option value = "Classic">Classic</option>
                 <option value = "Broadway">Broadway</option>
@@ -22,49 +22,49 @@
                 <option value = "Custom">Custom</option>
                 </select>
             </div>
-        <label>Year</label>
             <div> 
+        <label>Year</label>
                 <input type = "number" name = "year">
             </div>
-        <label>Frame Type</label>
             <div> 
+        <label>Frame Type</label>
                 <input type = "text" name = "frameType">
             </div>
-        <label>Capacity</label>
             <div> 
+        <label>Capacity</label>
                 <input type = "number" name = "capacity">
             </div>
-        <label>Serial Number</label>
             <div> 
+        <label>Serial Number</label>
                 <input type = "text" name = "serialNum">
             </div>
-        <label>E-Assist</label>
             <div>
+        <label>E-Assist</label>
             <select name = "eAssist">
                 <option value = "true">YES</option>
                 <option value = "false">NO</option>
             </select>
             </div>
-        <label>Canopy</label>
             <div>
+        <label>Canopy</label>
             <select name = "canopy">
                 <option value = "true">YES</option>
                 <option value = "false">NO</option>
             </select>
             </div>
-        <label>Rented</label>
             <div>
+        <label>Rented</label>
             <select name = "rented">
                 <option value = "true">YES</option>
                 <option value = "false">NO</option>
             </select>
             </div>
-        <label>Drivers First Name</label>
             <div> 
+        <label>Drivers First Name</label>
                 <input type = "text" name = "driverFirst">
             </div>
-        <label>Drivers Last Name</label>
             <div> 
+        <label>Drivers Last Name</label>
                 <input type = "text" name = "driverLast">
             </div>
             <br>

@@ -1,11 +1,41 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include('../partials/template') %>
+  <h1>Total Driver List</h1>
+    <table id = "tblDrivesList">
+      <thead>
+          <th>No.</th>
+          <th>Driver's First Name</th>
+          <th>Driver's Last Name</th>
+          <th>D.O.B.</th>
+          <th>TX DL. Number</th>
+          <th>TX DL. Exp. Date</th>
+          <th>ATX Chauffeur Permit Number</th>
+          <th>Permit Exp. Date</th>
+          <th>Details</th>
+      </thead>
+      <tbody id = "tblBodyDrivers">
+        <% drivers.forEach(function(d) { %>
+        <tr>
+          <td></td>
+          <td><%= d.driverFirst %></td>
+          <td><%= d.driverLast %></td>
+          <td><%= d.born %></td>
+          <td><%= d.DLNum %></td>
+              <% if (d.DLExpDate  < new Date()) { %>
+          <td style = "color: rgb(143, 2, 2)"> <%= d.DLExpDate %> </td>
+              <% } else { %>
+          <td> <%= d.DLExpDate %> </td>
+              <% } %>
+          <td><%= d.permitNum %></td>
+              <% if (d.permitExpDate  < new Date()) { %>
+          <td style = "color: rgb(143, 2, 2)"> <%= d.permitExpDate %> </td>
+              <% } else { %>
+          <td> <%= d.permitExpDate %> </td>
+              <% } %>
+          <td>
+            <a href="/drivers/<%= d._id %>"> View </a> 
+          </td>
+        </tr>
+          <% }); %>
+      </tbody>
+    </table>
+<%- include('../partials/footer') %>

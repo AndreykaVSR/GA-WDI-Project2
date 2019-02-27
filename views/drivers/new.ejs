@@ -1,75 +1,38 @@
 <%- include('../partials/template') %>
-    <h1>Enter a New Cab</h1>
-    <form id = "cabNew" action="/cabs" method="POST">
-        <label>Make</label>
+    <h1>Enter a New Driver</h1>
+        <form id = "driverNew" action="/drivers" method="POST">
             <div>
-            <select name = "make">
-                <option value = "mainStreet">Main Street</option>
-                <option value = "cyclesMaximus">Cycles Maximus</option>
-                <option value = "precision">Precision</option>
-                <option value = "coaster">Coaster</option>
-                <option value = "pedalac">Pedalac</option>
-                <option value = "china">China</option>
-                </select>
+            <label>Drivers First Name</label>
+                <input type = "text" name = "driverFirst">
             </div>
-        <label>Model</label>
             <div>
-            <select name = "model">
-                <option value = "mainStreet">Classic</option>
-                <option value = "cyclesMaximus">Broadway</option>
-                <option value = "precision">Boardwalk</option>
-                <option value = "coaster">Cargo</option>
-                <option value = "pedalac">Custom</option>
-                </select>
-            </div>
-        <label>Year</label>
+                <label>Drivers Last Name</label>
+                    <input type = "text" name = "driverLast">
+                </div>
             <div> 
-                <input type = "number" name = "year">
+        <label>D.O.B.</label>
+        <input  type = "date" type = "datetime-local" name = "born">
             </div>
-        <label>Frame Type</label>
             <div> 
-                <input type = "text" name = "frameType">
+        <label>TX DL.#</label>
+                <input type = "number" name = "DLNum">
             </div>
-        <label>Capacity</label>
             <div> 
-                <input type = "number" name = "capacity">
+        <label>TX DL. Exp. Date</label>
+                <input type = "date" type = "datetime-local" name = "DLExpDate">
             </div>
-        <label>Serial Number</label>
             <div> 
-                <input type = "number" name = "serialNum">
+        <label>ATX Chauffeur Permit #</label>
+                <input type = "number" name = "permitNum">
             </div>
-        <label>E-Assist</label>
-            <div>
-            <select name = "eAssist">
-                <option value = "YES">YES</option>
-                <option value = "NO">NO</option>
-            </select>
-            </div>
-        <label>Canopy</label>
-            <div>
-            <select name = "canopy">
-                <option value = "YES">YES</option>
-                <option value = "NO">NO</option>
-            </select>
-            </div>
-        <label>Rented</label>
-            <div>
-            <select name = "rented">
-                <option value = "YES">YES</option>
-                <option value = "NO">NO</option>
-            </select>
-            </div>
-        <label>Drivers First and Last Name</label>
             <div> 
-                <input type = "text" name = "firstName">
-                <input type = "text" name = "lastName">
+        <label>Permit Exp. Date</label>
+                <input type = "date" type = "datetime-local" name = "permitExpDate">
             </div>
+            <br>
             <div>
-                <input id = "btnCabAdd" type = "submit" value = "Add Cab">
+                <input id = "btnDriverAdd" type = "submit" value = "Add Driver">
             </div>
     </form> 
     <%- include('../partials/footer') %>
 
-
-    
-    

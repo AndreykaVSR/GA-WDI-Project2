@@ -3,15 +3,13 @@ var mongoose = require('mongoose');
  var Schema = mongoose.Schema;
 
  var driverSchema = new Schema({
-    name: {
-        first: String,
-        last: String
-    },
+    driverFirst: String,
+    driverLast: String,
     born: Date,
     DLNum: Number,
-    DLExpDate: Number,
+    DLExpDate: Date,
     permitNum: Number,
-    permitExpDate: Number
+    permitExpDate: Date
 });
 
 module.exports = mongoose.model('Driver', driverSchema);

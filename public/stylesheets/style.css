@@ -11,24 +11,30 @@ body {
   color: rgb(80, 80, 80);
 }
 
-.navElm {
-  margin: 0px 0px 7px 0px;
+nav {
+  margin: 0px 0px;
+  padding: 5px 0px;
   color: rgb(80, 80, 80);
+}
+
+.logInLnk {
+  display: inline-block;
+  text-align: left;
 }
 
 h1 {
-    color: rgb(80, 80, 80);
-    text-shadow: 2px 2px rgb(24, 23, 23);
+    color: rgb(57, 57, 57);
+    text-shadow: 2px 2px 5px rgba(24, 23, 23, .8);
 }
 
-#home, #flightsAll, #flightsAdd {
+/* #home, #addNewCab, #cabsList {
+  display: inline-block;
+  margin: 10px; 
   color: rgb(80, 80, 80);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
-
-
-#btnFlightAdd {
+#btnCabAdd, #btnCabDlt, #btnDriverAdd, #btnDriverDlt{
   margin: 20px auto;
   font-size: 14px;
   font-weight: bold;
@@ -39,45 +45,69 @@ h1 {
   padding: 5px;
 }
 
-#tableFlight {
+/* #tableFlight { */
   /* background-color: rgb(221, 112, 72); */
-  border: 4px;
+  /* border: 4px;
   border-color: rgb(167, 46, 2);
-}
+} */
 
-#tblBodyFlights {
+/* #tblBodyCabs {
   color: rgb(29, 28, 28); 
   margin: 7px;
   padding: 10px;
   background-color: rgba(221, 112, 72, .8);
   border: 5px;
   border-color: rgba(167, 46, 2, 1);
-}
+} */
 
-thead {
+th {
+  color: rgb(12, 12, 12); 
+  margin: 5px 5px 5px 5px;
+  padding: 5px, 10px;
+  background: rgb(199, 199, 162);
   font-size: 16px;
 }
 
+tr {
+    counter-increment: rowNumber;
+}
+
+table tr td:first-child::before {
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
+
+td:hover {
+  color: rgb(64, 56, 212);
+}
+
 table, th, td {
-  color: rgb(29, 28, 28); 
+  color: rgb(57, 57, 57);
   text-align: center;
-  margin: 5px;
-  padding: 5px;
+  margin: 5px 0px;
+  padding: 5px 0px;
   border: 10px;
   border-color: rgba(167, 46, 2, 1);
+  text-shadow: 2px 2px 5px rgba(24, 23, 23, .6);
 }
 
 a {
   color: rgb(80, 80, 80); 
+  display: inline-block;
+  align-content: center;
+  padding: 5px;
+  margin: 10px 0px; 
 }
 
 a:hover {
-  color: rgba(167, 46, 2, 1);
-  font-size: 15px;
-}
-
-tr:hover {
-  color: rgba(223, 219, 219, .7);
+  color: rgb(64, 56, 212);
+  display: inline-block;
+  align-content: center;
+  padding: 5px;
+  /* font-weight: 500; */
+  text-shadow: 2px 2px 3px rgba(44, 44, 46, .7);
+  /* font-size: 15px; */
 }
 
 label {
@@ -112,22 +142,30 @@ select {
   font-size: 14px;
 }
 
-#flightNew {
-  background-color: rgba(221, 112, 72, .8);
-  margin: 0px ;
+/* #flightNew { */
+  /* background-color: rgba(221, 112, 72, .8); */
+  /* margin: 0px ; */
   /* display: grid; */
-  grid-template-columns: auto auto;
+  /* grid-template-columns: auto auto; */
   /* grid-gap: 1rem; */
   /* margin-bottom: 2rem; */
-}
+/* } */
 
-#tblBodyTickets {
+/* #tblBodyTickets {
   color: rgb(29, 28, 28); 
   margin: 7px;
   padding: 10px;
   background-color: rgba(221, 112, 72, .8);
   border: 5px;
   border-color: rgba(167, 46, 2, 1);
+} */
+
+table tr:nth-child(odd) {
+  background: rgb(224, 224, 187);
+}
+
+table tr:nth-child(even) {
+  background: rgb(199, 199, 162);
 }
 
 /* form {

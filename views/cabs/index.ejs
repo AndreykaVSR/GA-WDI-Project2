@@ -2,24 +2,24 @@
   <h1>Total Cab List</h1>
     <table id = "tblCabsList">
       <thead>
-        <tr>
-          <th style = "color: rgb(80, 79, 79);" >Make</th>
-          <th style = "color: rgb(80, 79, 79);" >Model</th>
-          <th style = "color: rgb(80, 79, 79);" >Year</th>
-          <th style = "color: rgb(80, 79, 79);" >Frame Type</th>
-          <th style = "color: rgb(80, 79, 79);" >Serial Number</th>
-          <th style = "color: rgb(80, 79, 79);" >Capacity</th>
-          <th style = "color: rgb(80, 79, 79);" >E-Assist</th>
-          <th style = "color: rgb(80, 79, 79);" >Canopy</th>
-          <th style = "color: rgb(80, 79, 79);" >Rented</th>
-          <th style = "color: rgb(80, 79, 79);" >Drivers First Name</th>
-          <th style = "color: rgb(80, 79, 79);" >Drivers Last Name</th>
-          <th style = "color: rgb(80, 79, 79);" >Details</th>
-        </tr>
+          <th>No.</th>
+          <th>Make</th>
+          <th>Model</th>
+          <th>Year</th>
+          <th>Frame Type</th>
+          <th>Serial Number</th>
+          <th>Capacity</th>
+          <th>E-Assist</th>
+          <th>Canopy</th>
+          <th>Rented</th>
+          <th>Drivers First Name</th>
+          <th>Drivers Last Name</th>
+          <th>Details</th>
       </thead>
         <tbody id = "tblBodyCabs">
           <% cabs.forEach(function(c) { %>
           <tr>
+            <td></td>
             <td><%= c.make %></td>
             <td><%= c.model %></td>
             <td><%= c.year %></td>
