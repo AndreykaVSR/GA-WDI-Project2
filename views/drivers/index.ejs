@@ -13,6 +13,7 @@
           <th>Details</th>
       </thead>
       <tbody id = "tblBodyDrivers">
+          <% if (drivers.length > 0) { %>
         <% drivers.forEach(function(d) { %>
         <tr>
           <td></td>
@@ -36,6 +37,12 @@
           </td>
         </tr>
           <% }); %>
+          <% } %>
       </tbody>
     </table>
+    <div>
+        <form id = "FormRedir" action="/drivers/new/">
+          <input id = "btnAddCabRedir" type = "submit" value = "Add Driver">
+        </form>
+      </div>
 <%- include('../partials/footer') %>

@@ -9,11 +9,22 @@ module.exports = {
 };
 
 function deleteCab(req, res) {
-    console.log('Atmpting to delete a Cab');
-    Cab.findById(req.params.id, function(err, cab) {
-      res.render('cabs/show', { title: 'Delete Cab', cab});
-    });
-}
+      console.log('Atmpting to delete a Cab');
+      Cab.findByIdAndDelete(req.params.id, function(err, cab) {
+                console.log('DONE!!!');
+                // var cab_id = cab; 
+        // cab.delete(function(err, cab) {
+          if (err) {
+            console.log('error deleting cab')
+          } else {
+            res.redirect('/cabs');
+            console.log('DONE AGAIN!!!');
+            // res.redirect('/cabs', { title: 'Cabs', cab});
+          }
+        // });
+      });
+  };
+
 
 // function deleteCab(req, res) {
 //     Cab.findById(req.params.id, function(err, cab) {
@@ -40,9 +51,9 @@ function show(req, res) {
   }
 
 function index(req, res) {
-    Cab.find({}).exec(function(err, cabs) {
+    Cab.find({}, function(err, cabs) {
         // console.log(cabs);
-      res.render('cabs/index', { title: 'Cabs', cabs });
+      res.render('cabs/index', { cabs });
     });
   };
 

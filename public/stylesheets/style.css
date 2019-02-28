@@ -9,6 +9,9 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   align-content: center;
   color: rgb(80, 80, 80);
+  /* height: 100%; */
+  /* margin: 0px, 100px; */
+  /* padding: 20px, 10px, 0px, 10px; */
 }
 
 img {
@@ -16,7 +19,13 @@ img {
   /* border-color: red; */
   border-radius: 7px;
   width: 525px;
+  box-shadow: 10px 10px 5px rgba(44, 44, 46, .7);
   /* height: 250px; */
+}
+
+img:hover {
+  width: 527px;
+  height: 260px;
 }
 
 /* div #indexImgs {
@@ -52,6 +61,10 @@ img {
   width: 500px;
 }
 
+#become:hover {
+  text-shadow: 2px 2px 3px rgba(44, 44, 46, .7);
+}
+
 /* #pedicabImg2 {
   display: flex;
   float: right;
@@ -78,6 +91,22 @@ h1 {
     text-shadow: 2px 2px 5px rgba(24, 23, 23, .8);
 }
 
+h2 {
+  color: rgb(57, 57, 57);
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(24, 23, 23, .8);
+}
+
+/* h3 {
+  font-family: ;
+} */
+
+h2:hover {
+  font-size: 18px;
+  color: rgb(64, 56, 212);
+  text-shadow: 2px 2px 3px rgba(44, 44, 46, .7);
+}
+
 /* #home, #addNewCab, #cabsList {
   display: inline-block;
   margin: 10px; 
@@ -85,7 +114,7 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-#btnCabAdd, #btnCabDlt, #btnDriverAdd, #btnDriverDlt{
+#btnCabAdd, #btnCabDlt, #btnDriverAdd, #btnDriverDlt, #btnAddCabRedir {
   margin: 20px auto;
   font-size: 14px;
   font-weight: bold;
@@ -94,7 +123,31 @@ h1 {
   background-color: rgba(167, 46, 2, .9);
   border-radius: 3px;
   padding: 5px;
+  box-shadow: 10px 10px 5px rgba(44, 44, 46, .7);
 }
+
+#btnAddCabRedir {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 0x 0px 100px;;
+ /* position: absolute; */
+ /* right: 0;
+ bottom: 0; */
+  /* position: relative; */
+  /* align-content: right; */
+  /* justify-content: right; */
+  /* display: inline-table; */
+}
+
+form #FormRedir {
+  align-content: right;
+}
+
+/* #btnCabAdd:hover, #btnCabDlt:hover, #btnDriverAdd:hover, #btnDriverDlt:hover{
+  width: 105%;
+  height: 105%;
+  box-shadow: 10px 10px 5px rgba(44, 44, 46, .7);
+} */
 
 /* #tableFlight { */
   /* background-color: rgb(221, 112, 72); */
@@ -127,6 +180,7 @@ table tr td:first-child::before {
     content: counter(rowNumber);
     min-width: 1em;
     margin-right: 0.5em;
+    padding: 5px, 10px, 0px, 10px;
 }
 
 /* td:hover {
@@ -193,6 +247,23 @@ select {
   font-size: 14px;
 }
 
+table tr:nth-child(odd) {
+  background: rgb(224, 224, 187);
+}
+
+table tr:nth-child(even) {
+  background: rgb(199, 199, 162);
+}
+
+footer {
+  margin: 0;
+  height: 70px;
+  color: rgb(184, 182, 182);
+  background-color: rgb(105, 105, 84);
+  line-height: 17px;
+  padding: 0 30px;
+}
+
 /* #flightNew { */
   /* background-color: rgba(221, 112, 72, .8); */
   /* margin: 0px ; */
@@ -211,13 +282,6 @@ select {
   border-color: rgba(167, 46, 2, 1);
 } */
 
-table tr:nth-child(odd) {
-  background: rgb(224, 224, 187);
-}
-
-table tr:nth-child(even) {
-  background: rgb(199, 199, 162);
-}
 
 /* form {
   background-color: rgba(221, 112, 72, .8);

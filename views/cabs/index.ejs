@@ -17,6 +17,7 @@
           <th>Details</th>
       </thead>
         <tbody id = "tblBodyCabs">
+            <% if (cabs.length > 0) { %>
           <% cabs.forEach(function(c) { %>
           <tr>
             <td></td>
@@ -40,6 +41,12 @@
             </td>
           </tr>
             <% }); %>
+            <% } %>
         </tbody>
     </table>
+    <div>
+        <form id = "FormRedir" action="/cabs/new/">
+          <input id = "btnAddCabRedir" type = "submit" value = "Add Cab">
+        </form>
+      </div>
 <%- include('../partials/footer') %>

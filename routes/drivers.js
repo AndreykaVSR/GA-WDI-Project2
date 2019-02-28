@@ -7,7 +7,7 @@ router.get('/', driversCtrl.index);
 router.get('/new', driversCtrl.new);
 router.get('/:id', driversCtrl.show);
 router.post('/', driversCtrl.create);
-// router.get('/:id/delete', driversCtrl.delete);
+router.delete('/:id', driversCtrl.delete);
 // router.delete('/:id', driversCtrl.removeDriver);
 // router.post('/:id', driversCtrl.update);
 // router.get('/:id/edit', driversCtrl.edit);
