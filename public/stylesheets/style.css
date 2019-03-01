@@ -256,6 +256,8 @@ table tr:nth-child(even) {
 }
 
 footer {
+  border-radius: 10px;
+  /* width: 1000; */
   margin: 0;
   height: 70px;
   color: rgb(184, 182, 182);

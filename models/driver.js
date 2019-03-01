@@ -9,7 +9,8 @@ var mongoose = require('mongoose');
     DLNum: Number,
     DLExpDate: Date,
     permitNum: Number,
-    permitExpDate: Date
+    permitExpDate: Date,
+    googleId: String
 });
 
 module.exports = mongoose.model('Driver', driverSchema);

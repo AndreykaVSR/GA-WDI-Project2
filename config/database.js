@@ -1,7 +1,9 @@
 var mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb://localhost/cabs',
+
+
+mongoose.connect(process.env.DATABASE_URL || 'mongodb://localhost/cabs',
      {useNewUrlParser: true}
  );
 
