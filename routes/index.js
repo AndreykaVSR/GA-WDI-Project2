@@ -17,6 +17,12 @@ router.get('/oauth2callback', passport.authenticate(
   }
 ));
 
+// OAuth logout route
+router.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/drivers');
+});
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Fleet Inventory App' });

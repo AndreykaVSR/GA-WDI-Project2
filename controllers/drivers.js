@@ -34,14 +34,21 @@ function show(req, res) {
     });
   }
 
-  function index(req, res) {
+  function index(req, res, next) {
       Driver.find({}, function(err, drivers) {
           // console.log(drivers);
         res.render('drivers/index', { drivers });
+        res.render('drivers/index', {
+          drivers,
+          user: req.user,
+          name: req.query.name,
+          // sortKey
+        });
       });
     };
 
 function createDriver(req, res) {
+  // if (isLoggedIn)
     for (let key in req.body){
         if (req.body[key] === '') delete req.body[key];
     }
