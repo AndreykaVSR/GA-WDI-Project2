@@ -1,5 +1,17 @@
-<%- include('./partials/template') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+    <title>Cabs</title>
+</head>
   <body>
+    <nav>
+        <a class = "logInLnk" id = "adminLogIn" href="/auth/google">ADMIN LogIn</a>
+        <a class = "logInLnk"  id = "driverLogIn" href="/auth/google">DRIVER LogIn</a>
+    </nav>
     <h1><%= title %></h1>
       <h3>Welcome to <%= title %></h3>
         <div id = "indexImgs">
@@ -13,5 +25,10 @@
           </div>
         </div>
   </body>
+  <div id = "divFooter">
+  <footer>
+  <p >Disclamer: Use pedicabs at your own risk! Bedicabbers are homeless people that build their rigs in a garage out of street signs. They take jobs away from reindeer and huskies. They don't go to gym or to work for that matter, don't shower and they all look the same.</p>
+  <p >@ Copyright NOT!</p>
+  </footer>
+  </div>
 </html>
-<%- include('./partials/footer') %>

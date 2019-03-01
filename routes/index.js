@@ -13,19 +13,19 @@ router.get('/oauth2callback', passport.authenticate(
   'google',
   {
     successRedirect : '/drivers',
-    failureRedirect : '/drivers'
+    failureRedirect : '/'
   }
 ));
 
 // OAuth logout route
 router.get('/logout', function(req, res){
   req.logout();
-  res.redirect('/drivers');
+  res.redirect('/');
 });
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Fleet Inventory App' });
+  res.render('index', { title: 'VSR Pedicabs' });
 });
 
 module.exports = router;

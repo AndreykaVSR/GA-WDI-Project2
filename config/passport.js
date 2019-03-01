@@ -9,6 +9,7 @@ passport.use(new GoogleStrategy({
     callbackURL: process.env.GOOGLE_CALLBACK
   },
   function(accessToken, refreshToken, profile, cb) {
+    //   console.log(profile)
     // a user has logged in with OAuth...
     Driver.findOne({ 'googleId': profile.id }, function(err, driver) {
         if (err) return cb(err);
@@ -17,7 +18,8 @@ passport.use(new GoogleStrategy({
         } else {
           // we have a new driver via OAuth!
           var newDriver = new Driver({
-            name: profile.displayName,
+            driverFirst: profile.name.givenName,
+            driverLast: profile.name.familyName,
             email: profile.emails[0].value,
             googleId: profile.id
           });

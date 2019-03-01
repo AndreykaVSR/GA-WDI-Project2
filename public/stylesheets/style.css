@@ -266,6 +266,12 @@ footer {
   padding: 0 30px;
 }
 
+#divFooter {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+}
+
 /* #flightNew { */
   /* background-color: rgba(221, 112, 72, .8); */
   /* margin: 0px ; */

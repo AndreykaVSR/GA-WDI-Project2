@@ -9,16 +9,16 @@ module.exports = {
 };
 
 function deleteCab(req, res) {
-      console.log('Atmpting to delete a Cab');
+      // console.log('Atmpting to delete a Cab');
       Cab.findByIdAndDelete(req.params.id, function(err, cab) {
-                console.log('DONE!!!');
+                // console.log('DONE!!!');
                 // var cab_id = cab; 
         // cab.delete(function(err, cab) {
           if (err) {
-            console.log('error deleting cab')
+            // console.log('error deleting cab')
           } else {
             res.redirect('/cabs');
-            console.log('DONE AGAIN!!!');
+            // console.log('DONE AGAIN!!!');
             // res.redirect('/cabs', { title: 'Cabs', cab});
           }
         // });
